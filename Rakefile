@@ -9,6 +9,7 @@ Echoe.new('tweetnews', '0.1.0') do |p|
   p.email             = "github@firenxis.com"
   p.ignore_pattern    = ["tmp/*", "script/*"]
   p.development_dependencies = []
+  p.runtime_dependencies = ['twitter']
 end
 
 Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each {|ext| load ext}

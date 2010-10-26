@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{Integrate a filtered twitter timeline in ruby}
   s.email = %q{github@firenxis.com}
   s.extra_rdoc_files = ["README.rdoc", "lib/tweetnews.rb"]
-  s.files = ["README.rdoc", "Rakefile", "lib/tweetnews.rb", "Manifest", "tweetnews.gemspec"]
+  s.files = ["README.rdoc", "Rakefile", "init.rb", "lib/tweetnews.rb", "tweetnews.gemspec", "Manifest"]
   s.homepage = %q{http://github.com/firenxis/tweetnews}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Tweetnews", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
@@ -23,8 +23,11 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<twitter>, [">= 0"])
     else
+      s.add_dependency(%q<twitter>, [">= 0"])
     end
   else
+    s.add_dependency(%q<twitter>, [">= 0"])
   end
 end

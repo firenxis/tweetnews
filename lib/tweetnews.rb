@@ -1,5 +1,5 @@
-module Twitnot
-  def self.posts
+module TweetNews
+  def self.posts(ops={})
     
   end
 end
